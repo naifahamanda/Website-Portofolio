@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naifah Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="has-splash">
+
+<!-- WELCOME SPLASH SCREEN -->
+<div id="splash">
+  <div class="splash-content">
+    <div class="splash-tag" style="color: rgba(255,255,255,0.7); letter-spacing: 5px;">WELCOME TO MY</div>
+    <h1 class="splash-title" style="margin: 10px 0 30px; color: white;">PORTOFOLIO<span>.</span></h1>
+    <button class="splash-btn" onclick="enterSite()" style="box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+      LIHAT <span class="btn-arrow">→</span>
+    </button>
+  </div>
+</div>
+
+<div id="cursor"></div>
+<div id="progress"></div>
+<div id="toast">✦ Navigating...</div>
+
+<div class="blob-bg">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+
+
+<nav class="navbar">
+  <div class="logo">NA<span>.</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li onclick="focusSection('home')" data-section="home">Home</li>
+    <li onclick="focusSection('profil')" data-section="profil">Profil</li>
+    <li onclick="focusSection('akademik')" data-section="akademik">Akademik</li>
+    <li onclick="focusSection('organisasi')" data-section="organisasi">Organisasi</li>
+    <li onclick="focusSection('prestasi')" data-section="prestasi">Prestasi</li>
+    <li onclick="focusSection('skill')" data-section="skill">Skill</li>
+  </ul>
+  <div class="navbar-right">
+    <a href="social.html" class="btn-social">Social Media ↗</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <section id="home" class="section active">
+    <div class="hero-deco">
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <path d="M30 5 L33 27 L55 30 L33 33 L30 55 L27 33 L5 30 L27 27 Z" fill="#5B4CFD" opacity="0.25"/>
+        <path d="M30 14 L32 28 L46 30 L32 32 L30 46 L28 32 L14 30 L28 28 Z" fill="#EC4899" opacity="0.35"/>
+      </svg>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">✦ Interactive Portfolio</div>
+      <h1>Naifah Amanda<br><span>Noveni</span></h1>
+      <p>Informatics Student of University of Bengkulu</p>
+      <div class="hero-stats">
+        <div class="stat-pill">Designer</div>
+        <div class="stat-pill lime">Organisator</div>
+        <div class="stat-pill pink">Student</div>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <img src="foto-naifah.jpg" alt="Naifah Amanda Noveni"
+        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22220%22 height=%22260%22><rect width=%22220%22 height=%22260%22 rx=%2224%22 fill=%22%235B4CFD%22/><text x=%22110%22 y=%22145%22 text-anchor=%22middle%22 font-size=%2264%22>👩‍💻</text></svg>'">
+    </div>
+  </section>
+
+  <section id="profil" class="section">
+    <div class="section-label">✦ Tentang Aku</div>
+    <div class="profil-big">
+      Mahasiswa semester 4 S1 Informatika Universitas Bengkulu yang aktif di organisasi,
+      memiliki ketertarikan dalam desain grafis, pengembangan web, dan teknologi.
+      Bersemangat untuk terus belajar dan berkontribusi dalam dunia teknologi.
+    </div>
+    <div class="profil-grid">
+      <div class="profil-card"><div class="label">Universitas</div><div class="value">Universitas Bengkulu</div></div>
+      <div class="profil-card"><div class="label">Program Studi</div><div class="value">S1 Informatika</div></div>
+      <div class="profil-card"><div class="label">Semester</div><div class="value">4 (Aktif)</div></div>
+      <div class="profil-card"><div class="label">IPK</div><div class="value">3.58 / 4.00 🎯</div></div>
+    </div>
+  </section>
+
+  <section id="akademik" class="section">
+    <div class="section-label akademik-label">✦ Akademik</div>
+    <div class="akademik-list">
+      <div class="akademik-card ripple-container" onclick="addRipple(event,this)">
+        <div class="akademik-icon purple">💻</div>
+        <div>
+          <div class="akademik-title">Mahasiswa Aktif</div>
+          <div class="akademik-sub">Fakultas Teknik – Program Studi Informatika</div>
+          <div class="akademik-date">2024 – Sekarang</div>
+        </div>
+      </div>
+      <div class="akademik-card ripple-container" onclick="addRipple(event,this)">
+        <div class="akademik-icon pink">🎓</div>
+        <div>
+          <div class="akademik-title">Asisten Dosen</div>
+          <div class="akademik-sub">PPBO — Pemrograman Berorientasi Objek</div>
+          <div class="akademik-date">Januari 2026 – Sekarang</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="organisasi" class="section">
+    <div class="section-label orgs-label">✦ Organisasi</div>
+    <div class="orgs-grid">
+      <div class="org-card c1 ripple-container" onclick="addRipple(event,this)">
+        <div class="org-name">Himpunan Mahasiswa Teknik Informatika</div>
+        <div class="org-role">Anggota Departemen Komunikasi dan Informasi</div>
+        <a href="himatif.html" class="card-btn">Lihat ↗</a>
+      </div>
+      <div class="org-card c2 ripple-container" onclick="addRipple(event,this)">
+        <div class="org-name">UKM Engineering Research Community</div>
+        <div class="org-role">Anggota Biro Keuangan</div>
+        <a href="ercom.html" class="card-btn">Lihat ↗</a>
+      </div>
+      <div class="org-card c3 ripple-container" onclick="addRipple(event,this)">
+        <div class="org-name">BEM Fakultas Teknik</div>
+        <div class="org-role">Anggota Media dan Informasi</div>
+        <a href="bem.html" class="card-btn">Lihat ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="prestasi" class="section">
+    <div class="section-label">✦ Prestasi</div>
+    <div class="prestasi-grid">
+      <div class="prestasi-card ripple-container" onclick="addRipple(event,this)">
+        <div class="prestasi-rank">#3</div>
+        <div class="prestasi-title">Juara 3 Desain Infografis NEON</div>
+        <div class="prestasi-sub">Tingkat Nasional</div>
+        <span class="prestasi-trophy">🏆</span>
+        <a href="neon.html" class="card-btn dark">Lihat ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skill" class="section">
+    <div class="section-label skill-label">✦ Keahlian</div>
+    <div class="skill-section-title">Design Tools</div>
+    <div class="skills-grid">
+      <div class="skill-chip sc1 ripple-container" onclick="addRipple(event,this)">✏️ Canva</div>
+      <div class="skill-chip sc4 ripple-container" onclick="addRipple(event,this)">🎨 Figma</div>
+      <div class="skill-chip sc5 ripple-container" onclick="addRipple(event,this)">🎬 Alight Motion</div>
+    </div>
+    <div class="skill-section-title">Programming</div>
+    <div class="skills-grid">
+      <div class="skill-chip sc2 ripple-container" onclick="addRipple(event,this)">🐍 Python</div>
+      <div class="skill-chip sc6 ripple-container" onclick="addRipple(event,this)">🌐 HTML/CSS</div>
+      <div class="skill-chip sc8 ripple-container" onclick="addRipple(event,this)">☕ Java</div>
+    </div>
+    <div class="skill-section-title">Soft Skills</div>
+    <div class="skills-grid">
+      <div class="skill-chip sc3 ripple-container" onclick="addRipple(event,this)">🤝 Teamwork</div>
+      <div class="skill-chip sc7 ripple-container" onclick="addRipple(event,this)">💬 Communication</div>
+      <div class="skill-chip sc1 ripple-container" onclick="addRipple(event,this)">🧠 Problem Solving</div>
+      <div class="skill-chip sc4 ripple-container" onclick="addRipple(event,this)">⏰ Time Management</div>
+    </div>
+  </section>
+
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

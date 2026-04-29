@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Media – Naifah</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Custom additions for Social Page to match index.html vibe */
+  .social-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .social-item {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .social-item:hover .akademik-title {
+    color: var(--purple);
+  }
+
+  .btn-back-main {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: var(--purple);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 700;
+    transition: 0.3s;
+    text-align: center;
+  }
+
+  .btn-back-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(91, 76, 253, 0.3);
+    background: var(--violet);
+  }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+<div id="toast">✦ Navigating...</div>
+
+<div class="blob-bg">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<nav class="navbar">
+  <div class="logo">NA<span>.</span></div>
+  <div class="navbar-right">
+    <a href="index.html?skipSplash=true" class="btn-social">Portfolio ←</a>
+  </div>
+</nav>
+
+<div class="container">
+  <section class="section active" style="opacity: 1;">
+    <div class="section-label">✦ Media Sosial</div>
+    <h1>Connect With <span>Me</span></h1>
+    <p style="color: #666; margin-bottom: 30px;">Mari berteman dan berkolaborasi melalui platform berikut:</p>
+    
+    <div class="social-wrapper">
+      <a href="https://www.instagram.com/naifah.an/?utm_source=ig_web_button_share_sheet" target="_blank" class="social-item">
+        <div class="akademik-card ripple-container" onclick="addRipple(event,this)">
+          <div class="akademik-icon pink">📸</div>
+          <div>
+            <div class="akademik-title">Instagram</div>
+            <div class="akademik-sub">@naifah.an</div>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.tiktok.com/@dramaturgyu?is_from_webapp=1&sender_device=pc" target="_blank" class="social-item">
+        <div class="akademik-card ripple-container" onclick="addRipple(event,this)">
+          <div class="akademik-icon purple">🎵</div>
+          <div>
+            <div class="akademik-title">TikTok</div>
+            <div class="akademik-sub">@dramaturgyu</div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
